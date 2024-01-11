@@ -6,7 +6,7 @@
    --color-1-primary: #F2A900;
    --color-1-primary-hover: #d59500;
    --color-2-secondary: #3E5CD2;
-   --color-3: #66e5bf;
+   --color-3: #FDF2D9;
    --color-4: #EDDBEF;
    --color-5: #FFC6B5;
    --color-6: #FFFFFF;
@@ -191,6 +191,8 @@ header nav .list {
 
 
 section.form-information {
+   margin-top: 50px;
+   margin-bottom: 50px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -199,6 +201,9 @@ section.form-information {
    
 
    & .form-content {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
       max-width: 377px;
    }
    
@@ -324,7 +329,24 @@ fieldset {
 
    }
 
+   .form-information:after {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 400px;
+      background-color: var(--color-9);
+      padding-top: 20px;
+      margin-bottom: 20px;
+   }
+
+
    .form-information {
+      
+      margin-top: 0 !important;
+      position: relative;
       flex-direction: column;
       padding-top: 20px;
       padding-bottom: 50px;
@@ -334,9 +356,28 @@ fieldset {
       }
 
       & .form-container {
+         max-width: 100% !important;
          width: 100% !important;
       }
    }
+   fieldset.form-devider {
+      flex-direction: column;
+      gap: 0 !important;
+   }
+
+   fieldset.buttons {
+      flex-direction: column;
+      gap: 0 !important;
+   }
+
+   input {
+      height: 65px !important;
+
+      &.privacy[type="submit"] {
+         height: 50px !important;
+      }
+   }
+   
 
    
 }
