@@ -1,135 +1,172 @@
+/* --font links-- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 /* --global-- */
 :root {
-   --white: #fff;
-   --blueberry: #050542;
-   --turquoise: #66e5bf;
-   --lavender: #a675f5;
-   --attention: #050542;
-   --attention-background: #05054233;
-   --call-to-action: #fffc86;
-   --rounded: .4rem;
-   --pilled: 1.4rem;
-   --shadow: .3rem;
-   --border: .15rem;
+   --color-1-primary: #F2A900;
+   --color-2-secondary: #3E5CD2;
+   --color-3: #66e5bf;
+   --color-4: #EDDBEF;
+   --color-5: #FFC6B5;
+   --color-6: #FFFFFF;
+   --color-7: #000000;
+   --color-8: #404040;
+   --color-9: #E5E7EB;
+   --color-10: #181818;
+   --banner-bg-clr: #DDB864;
 }
 * {
    box-sizing: border-box;
-}
-body{
-   margin: 1rem; 
-   padding: 0;
-   font-family: "Open Sans", sans-serif;
-   font-size: 1.2rem;
-   line-height: 1.4;
-   background: var(--blueberry);
-   color: var(--white);
-}
-h1{
-
-}
-h2{
-   font-size: 2rem;
-   font-weight: 400;
-}
-ul{
-   list-style: none;
+   margin: 0;
    padding: 0;
 }
-ol{
+
+body {
+   font-family: "Manrope", sans-serif;
+   background: var(--color-10);
+}
+
+h1 {
+   font-size: 48px;
+   font-weight: 500;
+   line-height: 1.2;
+}
+
+h2 {
+   font-size: 64px;
+   font-weight: 500;
+   line-height: 1.2;
+}
+
+h3 {
+   font-size: 30px;
+   font-weight: 500;
+   line-height: 1.2;
+}
+
+p {
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 1.5;
+}
+
+p.small {
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1.5;
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-7);
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+ul {
    list-style: none;
-}
-a{
-   color: var(--turquoise);
-}
-a:hover, a:active{
-   background: var(--turquoise);
-   color: var(--blueberry)
+   padding: 0;
+   margin: 0;
 }
 
-/* SECTIONS */
-section, footer{
-   padding: 1rem;
-   margin-bottom: 2rem;
+img {
+   max-width: 100%;
+   height: auto;
 }
-nav{
 
-}
-nav h2{
+/* --container-- */
 
+.container {
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 0 15px;
 }
-#intro{
-   max-width: 40rem;
-}
-#gedragscriteria{
-   max-width: 25rem;
-}
-#leertaken{
-   max-width: 25rem;
-}
-#leertaken ul{
-   list-style: disc;
-   padding-left: 1rem;;
-}
-#sprintplanning{
 
-}
-#sprintplanning th,#sprintplanning td{
-   background: var(--turquoise);
-   color: var(--blueberry);
-   display: inline-block;
-   width: 100%;
-   padding: 0.5rem;
-}
-footer{
+header {
+   padding: 20px 0;
+   /* height: 126px; */
+   background-color: var(--color-6);
 
-}
+   & .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
 
 
-/* CLASSES */
-.green-on-blue{
-   background: var(--turquoise);
-   color: var(--blueberry);
-}
-.green-line-on-blue{
-   /* background: var(--turquoise); */
-   border: solid var(--turquoise) var(--border);
-   color: var(--turquoise);
-}
-.white-line-on-blue{
-   /* background: var(--turquoise); */
-   border: solid var(--white) var(--border);
-   color: var(--white);
-}
-.white-line-on-blue a{
-   color: var(--white);
-}
-.purple-on-blue{
-   background: var(--lavender);
-   color: var(--blueberry);
-}
-.active{
-   background: var(--call-to-action);
-   color: var(--blueberry);
-}
-.rounded{
-   border-radius: var(--rounded);
-  }
-.pilled{
- border-radius: var(--pilled);
-}
-.shadow{
-   box-shadow: var(--shadow) var(--shadow);
-  }
+      & .logo {
+         height: 100%;
+         display: flex;
+         align-items: center;
+         
+         & img {
+            max-height: 32px;
+            width: auto;
+         }
+      }
 
-  /* MEDIA QUERIES */
-@media (min-width: 45rem){
-   body{
-      /* background: pink; */
+      & nav {
+         display: none
+      }
+
+      & nav ul {
+         display: grid;
+         grid-template-columns: repeat(7, 1fr);
+         height: 100%;
+         align-items: center;
+         gap: 5px;
+         
+
+         & li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* padding: 0 20px; */
+
+            & a {
+               height: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               /* padding: 10px 20px; */
+            }
+         }
+      }
    }
-   #gedragscriteria, #leertaken{
-      display: inline-block;
-      width: 48%;
-      vertical-align: top;
+}
+
+.cover-image {
+   height: 200px;
+   position: relative;
+   background-image: url(../../cover.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+   /* background-color: blue; */
+
+
+   & .cover-container {
+      max-width: 1140px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 15px;
    }
+   
+   & h1 {
+      color: var(--color-6);
+      font-size: 35px;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+   }
+
+
 }
