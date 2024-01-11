@@ -63,9 +63,9 @@ a {
 
 
 ul {
-   list-style: none;
    padding: 0;
    margin: 0;
+   padding-left: 20px;
 }
 
 img {
@@ -75,7 +75,7 @@ img {
 
 /* --container-- */
 
-.container, section, .cover-container {
+.container, section, .cover-container, footer {
    max-width: 1536px;
    margin: 0 auto;
    padding: 0 15px;
@@ -147,11 +147,6 @@ header nav .list {
    height: 48px;
 }
 
-/* media 715 nav close */
-
-
-
-
 .cover-image {
    height: 360px;
    position: relative;
@@ -191,6 +186,7 @@ header nav .list {
 
 
 section.form-information {
+   gap: 20px;
    margin-top: 50px;
    margin-bottom: 50px;
    display: flex;
@@ -280,7 +276,7 @@ section.form-information {
 
    & input[type="submit"] {
       background-color: var(--color-1-primary);
-      color: var(--color-6);
+      color: var(--color-7);
       font-family: Manrope;
       font-size: 24px;
       font-style: normal;
@@ -306,6 +302,208 @@ fieldset {
    border: none;
    padding: 0;
    margin: 0;
+}
+
+
+
+
+
+.section-overlay-color-2 {
+   padding: 112px 0;
+   background-color: var(--color-4);
+}
+
+.section-2 {
+   /* grid takes 2/3 of the grid */
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: 20px;
+
+   & .main-content {
+      padding: 30px;
+      background-color: var(--color-6);
+      /* takes 2/3th */
+      grid-column: 1 / 2;
+      height: 732px;
+      
+   }
+
+   & .right-tabs {
+      /* takes 1/3th */
+      grid-column: 2 / 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   & .right-tabs .tab {
+      background-color: var(--color-6);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      /* first tab */
+
+      & h4 {
+         font-size: 30px;
+         font-weight: 500;
+      }
+
+      &:hover .tab-link {
+         background-color: var(--color-1-primary-hover);
+      }
+      
+
+      &.tab-1 {
+         background-color: var(--color-5);
+      }
+
+      &.tab-2 {
+         color: var(--color-6);
+         background-color: var(--color-2-secondary);
+      }
+
+      & .buttons {
+         display: flex;
+         justify-content: flex-end;
+         gap: 20px;
+      }
+
+      & .tab-link {
+         
+         display: grid;
+         place-items: center;
+         width: 50px;
+         height: 50px;
+         
+         background-color: var(--color-1-primary);
+
+         
+      }
+   }
+}
+
+.section-2 ul , footer ul {
+   padding-top: 18px;
+   padding-left: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   /* add dots */
+   list-style: disc;
+   /* make dots primary color */
+
+
+}
+
+
+
+
+
+
+.section-overlay-color-3 {
+   background-color: var(--color-8);
+   color: var(--color-6);
+}
+
+footer ul {
+   list-style-type: none;
+ }
+
+footer ul li::before {
+   list-style-type: none;
+   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+   color: var(--color-1-primary); /* Change the color */
+   font-weight: bold; /* If you want it to be bold */
+   display: inline-block; /* Needed to add space between the bullet and the text */
+   width: 2em; /* Also needed for space (tweak if needed) */
+   margin-left: -1em; /* Also needed for space (tweak if needed) */
+ }
+
+footer {
+   padding: 50px 15px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 20px;
+}
+
+footer .logo {
+   padding-bottom: 20px;
+}
+
+footer .footer-main-content p {
+   padding-bottom: 20px;
+}
+
+.footer-tab h3 {
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+
+li {
+   display: flex;
+}
+
+li a {
+   color: var(--color-6);
+}
+
+li a p {
+   width: fit-content;
+   display: flex;
+   background-image: linear-gradient(transparent calc(100% - 2px), #F2A900 2px), linear-gradient(transparent calc(100% - 2px), transparent 2px);
+   background-repeat: no-repeat;
+   background-size: 0 100%, 100% 100%;
+   font-weight: 700;
+   font-size: 1rem;
+   line-height: 1.5rem;
+   transition: background-size .3s cubic-bezier(.4, 0, 0.2, 1);
+
+   &:hover {
+      background-size: 100% 100%, 100% 100%;
+   }
+
+}
+
+.techmore-button {
+   color: var(--color-7);
+   display: flex;
+   align-items: center;
+   width: fit-content;
+   background-color: var(--color-1-primary);
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   border: none;
+   cursor: pointer;
+   padding: 10px 20px;
+   height: 50px;
+   margin-bottom: 10px;
+
+   &:hover {
+      background-color: var(--color-1-primary-hover);
+   }
+}
+
+.socials {
+   display: flex;
+   gap: 10px;
+
+   & a {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-1-primary);
+
+      &:hover {
+         background-color: var(--color-1-primary-hover);
+      }
+   }
 }
 
 
@@ -377,7 +575,26 @@ fieldset {
          height: 50px !important;
       }
    }
-   
 
-   
+   /* tabs */
+
+   .section-2 {
+      /* grid layer */
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+   }
+
+   .main-content {
+      height: fit-content !important;
+   }
+
+   h2 {
+      font-size: 30px;
+   }
+
+   footer {
+      grid-template-columns: 1fr;
+   }
 }
