@@ -73,12 +73,17 @@ img {
    height: auto;
 }
 
+::selection {
+   background-color: var(--color-1-primary);
+   color: var(--color-7);
+}
+
 /* --container-- */
 
 .container, section, .cover-container, footer {
    max-width: 1536px;
    margin: 0 auto;
-   padding: 0 15px;
+   padding: 0 30px;
 }
 
 header {
