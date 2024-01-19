@@ -155,7 +155,7 @@ header nav .list {
 .cover-image {
    height: 360px;
    position: relative;
-   background-image: url(../../cover.png);
+   background-image: url(../cover.png);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
