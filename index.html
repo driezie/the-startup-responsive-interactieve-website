@@ -79,31 +79,33 @@
                 </div>
 
                 
-
-                <form class="form-container" action="" method="_POST">
-                    <h2>
-                        Download de keuzegids
-                    </h2>
-                    <fieldset class="form-devider">
-                        <input type="text" placeholder="Voornaam*">
-                        <input type="text" placeholder="Achternaam*">
-                    </fieldset>
-
+                <form class="form-container" action="./download.pdf" method="get">
+                    <!-- Form -->
                     <fieldset>
-                        <input type="email" placeholder="Email*">
+                        <h2>
+                            Download de keuzegids
+                        </h2>
+                        <div class="form-devider">
+                            <label for="name">Naam*</label>
+                            <input type="text" placeholder="Naam" required>
+                        </div>
+
+                        <p class="form-devider">
+                            <label for="email">Email*</label>
+                            <input type="email" placeholder="Email*" required>
+                        </p>
+
+                        <p class="form-devider">
+                            <label for="phonenumber">Telefoonnummer*</label>
+                            <input type="number" placeholder="Telefoonnummer" required>
+                        </p>
                     </fieldset>
 
-                    <fieldset>
-                        <input type="phonenumber" placeholder="Telefoonnummer">
-                    </fieldset>
-
-                    <!-- download button -->
-
-                    <fieldset class="buttons">
+                    <div class="buttons">
+                        <!-- Buttons -->
                         <input type="submit" value="Downloaden" class="button">
-                        <!-- Privacybeleid button -->
-                        <input type="submit" value="Privacybeleid" class="button privacy">
-                    </fieldset>
+                        <a href="" class="privacy">Privacy beleid</a>
+                    </div>
                 </form>
 
             </section>

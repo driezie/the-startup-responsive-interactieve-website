@@ -219,14 +219,17 @@ section.form-information {
       padding-bottom: 35px;
    }
 
-   & fieldset.form-devider {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap : 10px;
+   .label {
+      color: var(--color-7);
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
    }
 
-   & fieldset.buttons {
+
+   & .buttons {
       display: flex;
       justify-content: space-between;
       align-items: top;
@@ -235,19 +238,15 @@ section.form-information {
 
    & .privacy {
       max-width: 150px;
+      color: var(--color-2-secondary, #3E5CD2);
+      text-align: center;
       font-family: Manrope;
-      
-      
-      &[type="submit"] {
-         font-size: 1rem;
-         background-color: var(--color-6);
-         color: var(--color-7);
-         height: 50px;
-         
-         &:hover {
-            background-color: var(--color-4);
-         }
-      }
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-decoration-line: underline;
+   
    }
 
    & input {
@@ -280,6 +279,7 @@ section.form-information {
    /* submit */
 
    & input[type="submit"] {
+      max-width: 361px;
       background-color: var(--color-1-primary);
       color: var(--color-7);
       font-family: Manrope;
